@@ -18,6 +18,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  ...(process.env.NEXT_PUBLIC_SITE_URL
+    ? { metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL) }
+    : {}),
   title: "Shreyas Joshi | AI/ML Developer & Data Science Engineer",
   description:
     "Portfolio of Shreyas Pralhad Joshi — Final-year CSE student specializing in AI, RAG systems, NLP, and machine learning. Based in Bangalore, India.",
