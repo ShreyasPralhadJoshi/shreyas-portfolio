@@ -74,9 +74,7 @@ export default function Hero() {
         </motion.p>
 
         <h1 className="heading-xl mb-3">
-          <span className="gradient-text">
-            <StaggerText text={personalInfo.name} />
-          </span>
+          <StaggerText text={personalInfo.name} />
         </h1>
 
         <motion.p

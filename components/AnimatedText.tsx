@@ -9,6 +9,24 @@ interface StaggerTextProps {
 }
 
 export function StaggerText({ text, className = "" }: StaggerTextProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Visible immediately for SSR, slow JS, and before Framer Motion hydrates
+  if (!mounted) {
+    return (
+      <span
+        className={`bg-gradient-to-br from-accent to-accent-secondary bg-clip-text text-transparent ${className}`}
+        aria-label={text}
+      >
+        {text}
+      </span>
+    );
+  }
+
   const letters = text.split("");
 
   return (
@@ -23,7 +41,7 @@ export function StaggerText({ text, className = "" }: StaggerTextProps) {
             delay: i * 0.04,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="inline-block"
+          className="inline-block bg-gradient-to-br from-accent to-accent-secondary bg-clip-text text-transparent"
           style={{ whiteSpace: char === " " ? "pre" : undefined }}
         >
           {char === " " ? "\u00A0" : char}
@@ -40,7 +58,7 @@ interface RoleCycleProps {
 
 export function RoleCycle({ roles, className = "" }: RoleCycleProps) {
   const [index, setIndex] = useState(0);
-  const [displayText, setDisplayText] = useState("");
+  const [displayText, setDisplayText] = useState(roles[0] ?? "");
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
