@@ -1,4 +1,5 @@
 import type {
+  Certification,
   ContactInfo,
   Education,
   Experience,
@@ -30,6 +31,7 @@ export const personalInfo: PersonalInfo = {
   linkedin: "https://linkedin.com/in/shreyaspralhadjoshi",
   github: "https://github.com/shreyaspralhadjoshi",
   resumeUrl: "/resume.pdf",
+  profileImage: "/images/passportsizephoto.jpg",
   availableForWork: true,
   stats: [
     { label: "Projects Built", value: "10+" },
@@ -59,6 +61,7 @@ export const navLinks: NavLink[] = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -226,6 +229,75 @@ export const education: Education[] = [
     duration: "2020",
     grade: "60%",
     status: "Completed",
+  },
+];
+
+export const certifications: Certification[] = [
+  {
+    id: "aws-cloud-computing",
+    title: "AWS Academy — Cloud Computing",
+    issuer: "AWS Academy",
+    category: "Cloud",
+    credentialUrl: "/certificates/aws-academy-cloud-computing.pdf",
+    fileType: "pdf",
+  },
+  {
+    id: "simplilearn-agile-scrum",
+    title: "Agile Scrum Foundation",
+    issuer: "Simplilearn",
+    category: "Project Management",
+    credentialUrl: "/certificates/simplilearn-agile-scrum-foundation.pdf",
+    fileType: "pdf",
+  },
+  {
+    id: "simplilearn-dsa",
+    title: "Data Structures and Algorithms",
+    issuer: "Simplilearn",
+    category: "Development",
+    credentialUrl: "/certificates/simplilearn-data-structures-algorithms.pdf",
+    fileType: "pdf",
+  },
+  {
+    id: "simplilearn-jira",
+    title: "Introduction to JIRA",
+    issuer: "Simplilearn",
+    category: "Project Management",
+    credentialUrl: "/certificates/simplilearn-introduction-jira.pdf",
+    fileType: "pdf",
+  },
+  {
+    id: "simplilearn-sql",
+    title: "Introduction to SQL",
+    issuer: "Simplilearn",
+    category: "Development",
+    credentialUrl: "/certificates/simplilearn-introduction-sql.pdf",
+    fileType: "pdf",
+  },
+  {
+    id: "simplilearn-pm",
+    title: "Project Management Certification",
+    issuer: "Simplilearn",
+    category: "Project Management",
+    credentialUrl: "/certificates/simplilearn-project-management.pdf",
+    fileType: "pdf",
+  },
+  {
+    id: "scaler-java",
+    title: "Java Course — Mastering the Fundamentals",
+    issuer: "Scaler Topics",
+    date: "February 2024",
+    category: "Development",
+    credentialUrl: "/certificates/scaler-java-fundamentals.jpeg",
+    fileType: "image",
+  },
+  {
+    id: "enigma-2k23",
+    title: "ENIGMA 2K23 — Certificate of Participation",
+    issuer: "Jyothy Institute of Technology · AI & ML Dept.",
+    date: "December 2023",
+    category: "Event",
+    credentialUrl: "/certificates/enigma-2k23.jpeg",
+    fileType: "image",
   },
 ];
 

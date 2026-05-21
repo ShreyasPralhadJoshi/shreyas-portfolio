@@ -19,6 +19,7 @@ export interface PersonalInfo {
   linkedin: string;
   github: string;
   resumeUrl: string;
+  profileImage: string;
   availableForWork: boolean;
   stats: { label: string; value: string }[];
 }
@@ -91,4 +92,21 @@ export interface ContactInfo {
 export interface NavLink {
   label: string;
   href: string;
+}
+
+export type CertificationCategory =
+  | "Cloud"
+  | "Development"
+  | "Project Management"
+  | "Foundation"
+  | "Event";
+
+export interface Certification {
+  id: string;
+  title: string;
+  issuer: string;
+  date?: string;
+  category: CertificationCategory;
+  credentialUrl: string;
+  fileType: "pdf" | "image";
 }

@@ -72,11 +72,11 @@ export default function About() {
             />
             <motion.div className="relative overflow-hidden rounded-2xl border border-border bg-surface">
               <Image
-                src="/images/profile.png"
+                src={personalInfo.profileImage}
                 alt={`Professional headshot of ${personalInfo.displayName}, AI/ML Developer`}
                 width={400}
                 height={500}
-                className="h-full w-full object-cover object-top"
+                className="h-full w-full object-cover object-center"
                 priority
               />
             </motion.div>
